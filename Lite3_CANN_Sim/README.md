@@ -6,9 +6,7 @@ This branch have been tested in **ROS Noetic** under **Ubuntu 20.04**. Some user
 
 Note that this branch is different from the one in the `main` branch. The architecture and major modules are shown below
 
-<div align="center">
-    <img src="./img/mpc-wbc process diagram.png">
-</div>
+![mpc-wbc process diagram.png (262×322) (raw.githubusercontent.com)](https://raw.githubusercontent.com/DeepRoboticsLab/Lite3_Model-Control/main/Lite3_CANN_Sim/Lite3_CANN_Sim/model-control_modify/img/mpc-wbc process diagram.png?token=GHSAT0AAAAAACJ5HHSQGL3OBQ6CELDM65IKZKUNURQ)
 
 The codes are tested for DeepRobotics Lite3. To fine-tune the MPC and WBC algorithms, you can adjust the corresponding parameters (e.g. KP and KD in **quadruped/src/controllers/wbc/task_set** or weights in WBC locomotion controller).
 
