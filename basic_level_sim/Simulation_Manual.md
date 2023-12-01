@@ -22,11 +22,12 @@ sudo apt-get install ros-noetic-robot-state-publisher ros-noetic-joint-state-con
 sudo apt-get install ros-noetic-position-controllers ros-noetic-effort-controllers ros-noetic-joint-trajectory-controller
 sudo apt-get install ros-noetic-joint-state-publisher-gui
 ```
-## RViz查看模型
-打开一个新的终端
+
+## 查看模型
+   打开一个新的终端
 ```
 roslaunch lite3_motion_sim lite3_rviz_display.launch
-``
+```
 
 ## 仿真步骤
   ### 1.代码编译 ###
