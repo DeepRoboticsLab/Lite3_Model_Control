@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?> 
-<robot name="MiniLiteV3"> 
+<robot name="Lite3"> 
   <link name="TORSO"> 
     <visual> 
       <origin rpy="0 0 3.14159265" xyz="0.0 0.0 0.0"/> 
