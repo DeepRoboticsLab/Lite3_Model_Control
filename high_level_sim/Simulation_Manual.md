@@ -30,6 +30,7 @@ sudo apt install libyaml-cpp-dev
 sudo apt install libeigen3-dev
 sudo apt install liblcm-dev
 sudo apt install libglm-dev
+sudo apt-get install ros-<ros-version>-xacro
 sudo apt-get install ros-<ros-version>-controller-interface
 sudo apt-get install ros-<ros-version>-gazebo-ros-control 
 sudo apt-get install ros-<ros-version>-joint-state-controller 
