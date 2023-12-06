@@ -32,13 +32,6 @@
 #include <sensor_msgs/JointState.h>
 #include <gazebo_msgs/GetLinkState.h>
 #include <tf/transform_broadcaster.h>
-
-#include "xpp_msgs/topic_names.h"
-#include "xpp_msgs/TerrainInfo.h"
-#include "xpp_msgs/RobotParameters.h"
-#include "xpp_msgs/RobotStateCartesian.h"
-#include "xpp_states/convert.h"
-#include "xpp_states/robot_state_cartesian.h"
 #include "controllers/qr_locomotion_controller.h"
 
 
