@@ -2,7 +2,7 @@
 
 ## error 1: gazebo_gui-3  process has died [pid 2255, exit code 139, cmd /opt/ros/melodic/lib/gazebo_ros/gzclient __name:=gazebo_gui __log
 按照如下链接仍然解决不了的话，卸载后装Gazebo11
-(https://blog.csdn.net/gls_nuaa/article/details/122142356)https://blog.csdn.net/gls_nuaa/article/details/122142356
+https://blog.csdn.net/gls_nuaa/article/details/122142356
 ## error 2: Could not find a package configuration file provided by "Python3" with any of the following names: Python3Config.cmake  python3-config.cmake
 升级cmake 版本>=3.12
 ## error 3 usr/bin/ld: cannot find -llcm collect2: error: ld returned 1 exit status
