@@ -112,8 +112,7 @@ Open a new terminal and run the keyboard node
 rosrun examples example_keyboard
 ```
 
-## Step 2: Control robot by keyboard
-Control the quadruped robot using the following keys.
+## Control the quadruped robot using the following keys.
 
 `K` : switch control mode
 
