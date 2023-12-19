@@ -4,7 +4,7 @@
 按照如下链接仍然解决不了的话，卸载后装Gazebo11
 https://blog.csdn.net/gls_nuaa/article/details/122142356
 ## error 2: Could not find a package configuration file provided by "Python3" with any of the following names: Python3Config.cmake  python3-config.cmake
-升级cmake 版本>=3.12
+升级cmake 版本>=3.12 https://blog.csdn.net/qq_27350133/article/details/121994229
 ## error 3 usr/bin/ld: cannot find -llcm collect2: error: ld returned 1 exit status
 ```
 sudo apt install liblcm-dev
