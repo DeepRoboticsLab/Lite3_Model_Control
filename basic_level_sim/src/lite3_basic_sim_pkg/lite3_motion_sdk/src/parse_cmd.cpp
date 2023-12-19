@@ -46,7 +46,9 @@ void ParseCMD::work()
       }
     }
     if(message==nullptr||length==0){
-        data_is_rec=0;
+      setDataRevState(0);
+    }else{
+      setDataRevState(1);
     }
   };
     // Bind the server to a port.

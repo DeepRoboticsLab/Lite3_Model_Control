@@ -50,6 +50,11 @@ int main(int argc, char* argv[]){
     }
      now_time = my_set_Timer.get_now_time(start_time);                ///< Get the current time
 
+     if(robot_data_rec->getDataRevState()==0){                        //No data received from robot
+      cout<<"  No data from the robot was received!!!!!! "<<endl;
+      continue;
+    } 
+
 /*******A simple demo that stands up (for testing and can be deleted by yourself)*********/
     time_tick++;
     if(time_tick < 1000){
