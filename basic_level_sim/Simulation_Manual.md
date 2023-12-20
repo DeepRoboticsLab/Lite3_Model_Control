@@ -30,6 +30,17 @@ sudo apt-get install ros-noetic-position-controllers ros-noetic-effort-controlle
 sudo apt-get install ros-noetic-joint-state-publisher-gui
 ```
 
+用户也可使用安装脚本快捷安装所需库
+对于**ROS melodic** 版本
+```
+./install.sh melodic
+```
+
+对于**ROS noetic** 版本
+```
+./install.sh noetic
+```
+
 ## 查看模型
    打开一个新的终端
 ```
