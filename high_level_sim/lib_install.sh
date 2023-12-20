@@ -11,17 +11,34 @@ fi
 
 # 安装依赖项
 sudo apt update
+echo " ----------------------------------------------------"
 sudo apt install -y libyaml-cpp-dev
+echo " ----------------------------------------------------"
 sudo apt install -y libeigen3-dev
+echo " ----------------------------------------------------"
 sudo apt install -y liblcm-dev
+echo " ----------------------------------------------------"
 sudo apt install -y libglm-dev
+echo " ----------------------------------------------------"
 sudo apt install -y ros-$ros_version-rosbash
+echo " ----------------------------------------------------"
 sudo apt install -y ros-$ros_version-xacro
+echo " ----------------------------------------------------"
 sudo apt install -y ros-$ros_version-rviz
+echo " ----------------------------------------------------"
 sudo apt install -y ros-$ros_version-controller-interface
-sudo apt install -y ros-$ros_version-gazebo-ros-control 
-sudo apt install -y ros-$ros_version-joint-state-controller 
-sudo apt install -y ros-$ros_version-effort-controllers 
+echo " ----------------------------------------------------"
+sudo apt install -y ros-$ros_version-gazebo-ros-control
+echo " ----------------------------------------------------" 
+sudo apt install -y ros-$ros_version-joint-state-controller
+echo " ----------------------------------------------------" 
+sudo apt install -y ros-$ros_version-effort-controllers
+echo " ----------------------------------------------------" 
 sudo apt install -y ros-$ros_version-joint-trajectory-controller
-
+echo " ----------------------------------------------------"
+# 更新环境变量
+source ~/.bashrc
+echo " ----------------------------------------------------"
+source /opt/ros/$ros_version/setup.bash
+echo " ----------------------------------------------------"
 echo "安装完成"

@@ -39,6 +39,16 @@ sudo apt-get install ros-<ros-version>-joint-state-controller
 sudo apt-get install ros-<ros-version>-effort-controllers 
 sudo apt-get install ros-<ros-version>-joint-trajectory-controller
 ```
+Users can also use the installation script to quickly install the required libraries. Before executing the script, run `chmod +x lib_install.sh` to give the script permission.
+for **ROS melodic** version
+```
+./lib_install.sh melodic
+```
+
+for **ROS noetic** version
+```
+./lib_install.sh noetic
+```
 
 ## Step 2: Compile the codes
 Navigate to your workspace
