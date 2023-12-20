@@ -39,7 +39,7 @@ sudo apt-get install ros-<ros-version>-joint-state-controller
 sudo apt-get install ros-<ros-version>-effort-controllers 
 sudo apt-get install ros-<ros-version>-joint-trajectory-controller
 ```
-
+And make sure that your cmake version >= 3.12
 ## Step 2: Compile the codes
 Navigate to your workspace
 ```
