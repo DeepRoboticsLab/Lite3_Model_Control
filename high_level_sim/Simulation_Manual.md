@@ -4,7 +4,7 @@ This project branch integrates some advanced algrithms such as MPC and WBC to co
 
 This branch have been tested in **ROS Noetic** under **Ubuntu 20.04**. Some users report it can run in **ROS Melodic** under **Ubuntu 18.04**. To ensure optimal performance, we recommend testing this branch in **ROS Noetic** under **Ubuntu 20.04**. The **Gazebo** version is [Gazebo11](https://gazebosim.org/docs).
 
-Note that this branch is different from the one in the `main` branch. The architecture and major modules are shown below
+Note that this branch is different from the one in the `main` branch. The architecture and major modules are shown below:
 
 <div align="center">
     <img src="./img/mpc-wbc process diagram.png">
@@ -177,9 +177,5 @@ To run an example code on a real robot lite3, open a new terminal and execute th
 rosrun examples example_lite3_real
 ```
 
-<!-- If you have any question, please join our discussion group by scanning the following wechat QR code -->
 
-<!-- <div align="center">
-    <img src="./img/QR-code.jpg" width="30%">
-</div>
- -->
+
