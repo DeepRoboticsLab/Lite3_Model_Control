@@ -4,7 +4,6 @@ Lite3_MotionSDK 与 Gazebo 联合仿真
 ## 环境和依赖库
 请提前安装[ROS1](https://www.ros.org/blog/getting-started/#)和[Gazebo11](https://gazebosim.org/docs)。
 
-
 对于**ROS melodic**，请安装如下功能包：
 ```
 sudo apt-get install ros-melodic-rosbash
@@ -43,6 +42,7 @@ sudo apt-get install ros-noetic-joint-state-publisher-gui
 打开一个新的终端，输入：
 ```bash
 cd ${your_workspace}
+
 catkin_make
 source devel/setup.bash
 ```
