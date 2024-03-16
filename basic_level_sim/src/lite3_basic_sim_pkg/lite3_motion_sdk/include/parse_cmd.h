@@ -36,6 +36,10 @@
 class ParseCMD{
   private:
     RobotState state_rec; /**< Used to save received data.*/
+    int is_data_recv = 0;
+    void setDataRevState(int state){
+      is_data_recv = state > 0? 1:0;
+    }
   public:
    /**
     * @brief Create the accepted thread using the work()
@@ -48,6 +52,9 @@ class ParseCMD{
     void work();
 
     RobotState& get_recv(); /**< Save the obtained data in st.*/
+    int getDataRevState(){
+      return is_data_recv;
+    }
 };
 
 #endif  // PARSE_CMD_H_

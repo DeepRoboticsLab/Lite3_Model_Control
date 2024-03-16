@@ -10,7 +10,7 @@ Note that this branch is different from the one in the `main` branch. The archit
     <img src="./img/mpc-wbc process diagram.png">
 </div>
 
-The codes are tested for DeepRobotics Lite3. To fine-tune the MPC and WBC algorithms, you can adjust the corresponding parameters (e.g. KP and KD in **quadruped/src/controllers/wbc/task_set** or weights in WBC locomotion controller).
+The codes are tested for Jueying Lite3. To fine-tune the MPC and WBC algorithms, you can adjust the corresponding parameters (e.g. KP and KD in **quadruped/src/controllers/wbc/task_set** or weights in WBC locomotion controller).
 
 # 2. Source Code Structure
 
@@ -39,13 +39,24 @@ sudo apt-get install ros-<ros-version>-joint-state-controller
 sudo apt-get install ros-<ros-version>-effort-controllers 
 sudo apt-get install ros-<ros-version>-joint-trajectory-controller
 ```
-And make sure that your **cmake version >= 3.12** 
+Users can also use the installation script to quickly install the required libraries. Before executing the script, run `chmod +x lib_install.sh` to give the script permission.  
+for **ROS melodic** version
+```
+./lib_install.sh melodic
+```
+
+for **ROS noetic** version
+```
+./lib_install.sh noetic
+```
+
 ## Step 2: Compile the codes
-Navigate to your workspace
+Move the ***src*** folder from the ***high_level_sim*** directory to your workspace.  
+Navigate to your workspace.
 ```
 cd ${your_workspace}
 ```
-Build the project using ROS tool `catkin_make`
+Build the project using ROS tool `catkin_make`.
 ```
 catkin_make
 ```
@@ -71,16 +82,16 @@ source ${your_workspace}/devel/setup.bash
 **Note that this command must be executed for each new terminal to set up the environment.**
 
 ## Step 2: Start the Gazebo simulator and load a robot
-Run the Gazebo simulator
+Run the Gazebo simulator.
 ```
 roslaunch gazebo_model_spawn gazebo_startup.launch wname:=earth
 ```
-The `wname` (optional) parameter specifies the world to be loaded in Gazebo. The default value is `earth`. To simplify, you can also just run the following instructions
+The `wname` (optional) parameter specifies the world to be loaded in Gazebo. The default value is `earth`. To simplify, you can also just run the following instructions.
 ```
 roslaunch gazebo_model_spawn gazebo_startup.launch
 ```
 In a new terminal, spawn a robot model and manage controllers in the simulation environment.
-Below is for loading a DeepRobotics Lite3 robot.
+Below is for loading a Jueying Lite3 robot.
 ```
 roslaunch gazebo_model_spawn model_spawn.launch rname:=lite3 use_xacro:=true use_camera:=false
 ```
@@ -89,17 +100,17 @@ The `rname` (optional) parameter specifies the robot to be loaded in Gazebo. The
 The `use_xacro` (optional) parameter determines whether to load the model by `xacro` or `urdf`. The default value is `true`.
 
 The `use_camera` (optional) parameter controls whether to load camera model with the robot. The default value is `false`.
-To simplify, you can also just run the following instructions
+To simplify, you can also just run the following instructions.
 ```
 roslaunch gazebo_model_spawn model_spawn.launch 
 ```
 
-**Note that, after executing the command above, press the `Enter` key to start a robot’s controller. The low-level controller is now active and ready to support the movement of a quadruped robot.**
+**Note that, after executing the command above, press the `Enter` key to start a robot's controller. The low-level controller is now active and ready to support the movement of a quadruped robot.**
 
 ## Step 3: Run an example
-Here is an example to control DeepRobotics Lite3 to move around. Please check the `user_parameters.yaml` file in the **quadruped/config** folder is properly configured for the robot.
+Here is an example to control Jueying Lite3 to move around. Please check the `user_parameters.yaml` file in the **quadruped/config** folder is properly configured for the robot.
 
-To run an example, open a new terminal and execute
+To run an example, open a new terminal and execute.
 ```
 rosrun examples example_lite3_sim 
 ```
@@ -107,7 +118,7 @@ rosrun examples example_lite3_sim
 # 5. Control A Robot to Move Around using Keyboard
 
 ## Step 1: Run a keyboard node
-Open a new terminal and run the keyboard node
+Open a new terminal and run the keyboard node.
 ```
 rosrun examples example_keyboard
 ```
@@ -133,13 +144,13 @@ Utilizing the ROS joy package, you can operate a quadruped robot by using a game
 Once you launch the joy node, activate joy-control mode by pressing the `A` button, then maneuver the joystick handle to control the robot to move.
 
 ## Step 1: Install the ROS dependencies
-Install the joystick dependencies in ROS before using joystick to control the robot
+Install the joystick dependencies in ROS before using joystick to control the robot.
 ```
 sudo apt install ros-${your_ros_version}-joy
 ```
 
 ## Step 2: Run a joy_node in ROS
-Run a joy_node to receive joy’s command
+Run a joy_node to receive joy's command.
 ```
 rosrun joy joy_node
 ```
@@ -159,20 +170,20 @@ Joystick : control robot's movement
 
 # 7. Run on Real Robot
 
-Note that, if your code is running on an ARM architecture board (e.g. DeepRobotics Lite3), please navigate to the **quadruped** folder and add the following commands in the `CMakeLists.txt` file. 
+Note that, if your code is running on an ARM architecture board (e.g. Jueying Lite3 Motion Host), please navigate to the **quadruped** folder and add the following commands in the `CMakeLists.txt` file. 
 ```
 set(CMAKE_C_COMPILER "aarch64-linux-gnu-gcc")
 set(CMAKE_CXX_COMPILER "aarch64-linux-gnu-g++")
 ```
 
 ## Step 1: Start a ROS master
-Launch a ROS master node
+Launch a ROS master node.
 ```
 roscore
 ```
 
 ## Step 2: Run an example
-To run an example code on a real robot lite3, open a new terminal and execute the code
+To run an example code on a real robot lite3, open a new terminal and execute the code.
 ```
 rosrun examples example_lite3_real
 ```
