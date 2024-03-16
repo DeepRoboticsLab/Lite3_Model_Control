@@ -42,7 +42,6 @@ sudo apt-get install ros-noetic-joint-state-publisher-gui
 打开一个新的终端，输入：
 ```bash
 cd ${your_workspace}
-
 catkin_make
 source devel/setup.bash
 ```
