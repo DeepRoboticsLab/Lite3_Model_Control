@@ -108,7 +108,7 @@ roslaunch gazebo_model_spawn model_spawn.launch
 **Note that, after executing the command above, press the `Enter` key to start a robot's controller. The low-level controller is now active and ready to support the movement of a quadruped robot.**
 
 ## Step 3: Run an example
-Here is an example to control Jueying Lite3 to move around. Please check the `user_parameters.yaml` file in the **quadruped/config** folder is properly configured for the robot.
+Here is an example to control Jueying Lite3 to stand up. Please check the `user_parameters.yaml` file in the **quadruped/config** folder is properly configured for the robot.
 
 To run an example, open a new terminal and execute.
 ```
