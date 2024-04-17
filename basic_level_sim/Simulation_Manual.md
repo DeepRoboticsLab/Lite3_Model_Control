@@ -1,10 +1,9 @@
-Lite3_MotionSDK 与 Gazebo 联合仿真
-=====
+# Simulation Project Based on **Lite3 MotionSDK** and **Gazebo**
 
-## 环境和依赖库
-请提前安装[ROS1](https://www.ros.org/blog/getting-started/#)和[Gazebo11](https://gazebosim.org/docs)。
+## Dependencies
+Please install [ROS1](https://www.ros.org/blog/getting-started/#) and [Gazebo11](https://gazebosim.org/docs) before compilation.
 
-对于**ROS melodic**，请安装如下功能包：
+If you use **ROS melodic**, please install the following dependencies：
 ```
 sudo apt-get install ros-melodic-rosbash
 sudo apt-get install ros-melodic-xacro
@@ -15,7 +14,7 @@ sudo apt-get install ros-melodic-position-controllers ros-melodic-effort-control
 sudo apt-get install ros-melodic-joint-state-publisher-gui
 ```
 
-对于**ROS noetic**，请安装如下功能包：
+If you use **ROS noetic**, please install the following dependencies：
 ```
 sudo apt-get install ros-noetic-rosbash
 sudo apt-get install ros-noetic-xacro
@@ -24,50 +23,49 @@ sudo apt-get install ros-noetic-gazebo* ros-noetic-controller-interface
 sudo apt-get install ros-noetic-robot-state-publisher ros-noetic-joint-state-controller 
 sudo apt-get install ros-noetic-position-controllers ros-noetic-effort-controllers ros-noetic-joint-trajectory-controller
 sudo apt-get install ros-noetic-joint-state-publisher-gui
-```
+```  
 
-用户也可使用安装脚本快捷安装所需库，执行脚本前执行`chmod +x lib_install.sh`，给予脚本权限。  
-对于**ROS melodic** 版本：
+A script for installing these dependencies is provided. Before running the script, please use `chmod +x lib_install.sh` to add a permission.  
+For **ROS melodic**:
 ```
 ./lib_install.sh melodic
 ```
 
-对于**ROS noetic** 版本：
+For **ROS noetic**:
 ```
 ./lib_install.sh noetic
 ```
 
-## 代码编译
-将*basic_level_sim*目录下的*src*文件夹放入你的工作空间${your_workspace}中。
-打开一个新的终端，输入：
+## Compilation
+Place the ***src*** folder from the ***basic_level_sim*** directory into ${your_workspace}.  
+Open a new terminal and enter:
 ```bash
 cd ${your_workspace}
 catkin_make
 source devel/setup.bash
 ```
 
-## 在RViz中查看模型
-打开一个新的终端：
+## View the Model in RViz
+Open a new terminal and enter:
 ```bash
 cd ${your_workspace}
 source devel/setup.bash
 roslaunch lite3_motion_sim lite3_rviz_display.launch
 ```
 
-## 仿真步骤
-### 1.加载模型 ###
-打开一个新的终端：
+## Simulation
+### 1. Load the model
+Open a new terminal and enter:
 ```bash
 cd ${your_workspace}
 source devel/setup.bash
 roslaunch lite3_motion_sim lite3_gazebo_simulation_control.launch
 ```
 
-### 2.控制启动 ###
-打开一个新的终端：
+### 2. Start the controller
+Open a new terminal and enter:
 ```bash
 cd ${your_workspace}/basic_level_sim
 source devel/setup.bash
 rosrun lite3_motion_sim lite3_motion_sim
-
 ```

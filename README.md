@@ -1,4 +1,4 @@
-本代码库提供了***basic_level_sim***和***high_level_sim***两个仿真项目。
+本代码库提供了***basic_level_sim***和***high_level_sim***两个仿真项目，支持部署在[绝影Lite3](https://www.deeprobotics.cn/robot/index/product1.html)上。
 
 ***basic_level_sim***是基于绝影Lite3 MotionSDK和gazebo仿真平台实现的基础仿真项目，实现了绝影Lite3的起立动作。
 
